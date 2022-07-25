@@ -1,4 +1,4 @@
-resource "aws_eks_fargate_profile" "staging" {
+resource "aws_eks_fargate_profile" "kafka_east_1" {
   cluster_name           = aws_eks_cluster.cluster.name
   fargate_profile_name   = "kafka_east_1"
   pod_execution_role_arn = aws_iam_role.eks-fargate-profile.arn

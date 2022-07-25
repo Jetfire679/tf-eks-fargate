@@ -1,4 +1,4 @@
-resource "helm_release" "metrics-server" {
+resource "helm_release" "strimzi-kafka-operator" {
   name = "strimzi-kafka-operator"
 
   repository = "https://strimzi.io/charts/"

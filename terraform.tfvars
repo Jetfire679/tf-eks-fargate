@@ -13,12 +13,10 @@ cluster_version = "1.22"
 # VPC related Variables
 #
 vpc_id          = "vpc-070edbf33b1467f05"
-public_subnetA  = "subnet-0f550a25939309656"
-public_subnetB  = "subnet-04b72ce38056a977f"
-public_subnetC  = "subnet-0d1970d456ee71904"
+public_subnetA  = "subnet-050e5bbbd4ae9d648"
+public_subnetB  = "subnet-0e93e5f7aab05c49f"
+public_subnetC  = "subnet-01e884601d64ea8cd"
 
-private_subnetA = "subnet-0cf1f33656e7bb5bd"
-private_subnetB = "subnet-06d2270f44b022c10"
-private_subnetC = "subnet-0d0aa41e15a2cada8"
-
-  
+private_subnetA = "subnet-0a571baea4c7c14e3"
+private_subnetB = "subnet-090668532859dc5e4"
+private_subnetC = "subnet-08a644b3622e70308"

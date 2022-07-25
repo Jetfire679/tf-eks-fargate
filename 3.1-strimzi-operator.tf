@@ -15,7 +15,7 @@ resource "helm_release" "strimzi-kafka-operator" {
 }
 
 resource "helm_release" "strimzi-kafka-operator-east-2" {
-  name = "strimzi-kafka-operator"
+  name = "strimzi-kafka-operator-2"
 
   repository = "https://strimzi.io/charts/"
   chart      = "strimzi-kafka-operator"

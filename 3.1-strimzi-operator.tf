@@ -4,7 +4,7 @@ resource "helm_release" "strimzi-kafka-operator" {
   repository = "https://strimzi.io/charts/"
   chart      = "strimzi-kafka-operator"
   namespace  = "kafkaeast1"
-  version    = "0.28.0"
+  version    = "0.30.0"
 
   # set {
   #   name  = "metrics.enabled"

@@ -17,7 +17,7 @@ variable "public_subnetB" {
   
 }
 
-variable "public_subnetB" {
+variable "public_subnetC" {
   
 }
 

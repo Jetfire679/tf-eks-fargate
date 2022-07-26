@@ -12,29 +12,29 @@ variable "cluster_version" {
   default = "1.22"
 }
 
-variable "public_subnetA" {
-}
+# variable "public_subnetA" {
+# }
 
-variable "public_subnetB" {
+# variable "public_subnetB" {
   
-}
+# }
 
-variable "public_subnetC" {
+# variable "public_subnetC" {
   
-}
+# }
 
-variable "private_subnetA" {
+# variable "private_subnetA" {
   
-}
+# }
 
-variable "private_subnetB" {
+# variable "private_subnetB" {
   
-}
+# }
 
-variable "private_subnetC" {
+# variable "private_subnetC" {
   
-}
+# }
 
-variable "vpc_id" {
+# variable "vpc_id" {
   
-}
+# }

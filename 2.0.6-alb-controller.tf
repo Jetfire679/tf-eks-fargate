@@ -39,9 +39,9 @@ resource "helm_release" "aws-load-balancer-controller" {
 
   set {
     # name  = "vpcId"
-    name  = data.aws_ssm_parameter.rlv-VpcId
+    name  = "${data.aws_ssm_parameter.rlv-VpcId}"
     # value = aws_vpc.main.id
-    value  = data.aws_ssm_parameter.rlv-VpcId
+    value  = "${data.aws_ssm_parameter.rlv-VpcId}"
   }
 
   depends_on = [aws_eks_fargate_profile.kube-system]

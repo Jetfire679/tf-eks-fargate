@@ -25,10 +25,6 @@ provider "helm" {
   }
 }
 
-provider "kubernetes" {
-  config_context_cluster = "${var.cluster_name}-${var.aws_region}-eks-fargate-cluster"
-}
-
 data "aws_eks_cluster" "default" {
   name = aws_eks_cluster.cluster.name
   depends_on = [aws_eks_cluster. cluster]

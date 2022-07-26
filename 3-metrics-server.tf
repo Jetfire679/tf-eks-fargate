@@ -1,9 +1,9 @@
 resource "helm_release" "metrics_server" {
-    name = "metrics-server"
+    name = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
 
     repository       = "https://charts.bitnami.com/bitnami"
-    chart            = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
-    namespace        = "metrics-server"
+    chart            = "metrics-server"
+    namespace        = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
     version          = "6.0.8"
     create_namespace = true
 

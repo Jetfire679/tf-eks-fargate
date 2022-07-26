@@ -12,6 +12,6 @@ resource "aws_eks_fargate_profile" "kafka" {
   ]
 
   selector {
-    namespace = "kafka-${var.aws_region}"
+    namespace = "kafka-${var.AWS_DEFAULT_REGION}"
   }
 }

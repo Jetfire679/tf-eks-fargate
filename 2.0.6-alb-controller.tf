@@ -34,7 +34,7 @@ resource "helm_release" "aws-load-balancer-controller" {
   # EKS Fargate specific
   set {
     name  = "region"
-    value = "us-east-1"
+    value = var.AWS_DEFAULT_REGION
   }
 
   set {

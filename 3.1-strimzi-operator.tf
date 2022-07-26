@@ -4,7 +4,7 @@ resource "helm_release" "strimzi-kafka-operator-east1" {
   repository = "https://strimzi.io/charts/"
   chart      = "strimzi-kafka-operator"
   namespace  = "kafka"
-  # create_namespace = true
+  create_namespace = true
   version    = "0.30.0"
 
   depends_on = [aws_eks_fargate_profile.kube-system]

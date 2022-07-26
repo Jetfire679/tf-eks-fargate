@@ -14,6 +14,23 @@
 # }
 
 
+resource "helm_release" "metrics-server" {
+  name = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
+
+  repository = "https://kubernetes-sigs.github.io/metrics-server/"
+  chart      = "metrics-server"
+  namespace  = "kube-system"
+  create_namespace = true
+  version    = "3.8.1"
+
+  set {
+    name  = "metrics.enabled"
+    value = false
+  }
+
+  depends_on = [aws_eks_fargate_profile.kube-system]
+}
+
 # resource "helm_release" "metrics-server" {
 #   name = "metrics-server"
 

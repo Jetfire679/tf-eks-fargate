@@ -1,17 +1,17 @@
-resource "helm_release" "metrics_server" {
-    name = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
+# resource "helm_release" "metrics_server" {
+#     name = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
 
-    repository       = "https://charts.bitnami.com/bitnami"
-    chart            = "metrics-server"
-    namespace        = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
-    version          = "6.0.8"
-    create_namespace = true
+#     repository       = "https://charts.bitnami.com/bitnami"
+#     chart            = "metrics-server"
+#     namespace        = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-metrics-server"
+#     version          = "6.0.8"
+#     create_namespace = true
 
-    set {
-        name  = "apiService.create"
-        value = "true"
-    }
-}
+#     set {
+#         name  = "apiService.create"
+#         value = "true"
+#     }
+# }
 
 
 # resource "helm_release" "metrics-server" {

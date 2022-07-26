@@ -1,9 +1,3 @@
-# resource "kubernetes_namespace" "kafkaeast2" {
-#   metadata {
-#     name = "kafkaeast2"
-#   }
-# }
-
 resource "helm_release" "strimzi-kafka-operator-east1" {
   name = "strimzi-kafka-operator"
 
@@ -11,7 +5,7 @@ resource "helm_release" "strimzi-kafka-operator-east1" {
   # chart      = "strimzi-kafka-operator"
   chart      = "./kube/strimzi-kafka-operator-east1"
   namespace  = "kafkaeast1"
-  create_namespace = true
+  # create_namespace = true
   version    = "0.30.0"
 
   depends_on = [aws_eks_fargate_profile.kube-system]
@@ -25,6 +19,7 @@ resource "helm_release" "strimzi-kafka-operator-east2" {
   # chart      = "strimzi-kafka-operator"
   chart      = "./kube/strimzi-kafka-operator-east2"
   namespace  = "kafkaeast1"
+  create_namespace = true
   version    = "0.30.0"
 
   depends_on = [kubernetes_namespace.kafkaeast2]

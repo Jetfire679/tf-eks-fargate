@@ -1,3 +1,9 @@
+# resource "kubernetes_namespace" "kafkaeast2" {
+#   metadata {
+#     name = "kafkaeast2"
+#   }
+# }
+
 resource "helm_release" "strimzi-kafka-operator-east1" {
   name = "strimzi-kafka-operator"
 

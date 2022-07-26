@@ -1,5 +1,5 @@
 resource "aws_iam_role" "eks-fargate-profile" {
-  name = "${var.cluster_name}-${var.aws_region}-kube-system-profile"
+  name = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-kube-system-profile"
 
   assume_role_policy = jsonencode({
     Statement = [{

@@ -1,5 +1,5 @@
 resource "aws_iam_role" "eks-cluster" {
-  name = "${var.cluster_name}-${var.aws_region}-eks-fargate-cluster-iamrole"
+  name = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-eks-fargate-cluster-iamrole"
 
   assume_role_policy = <<POLICY
 {
@@ -23,7 +23,7 @@ resource "aws_iam_role_policy_attachment" "amazon-eks-cluster-policy" {
 }
 
 resource "aws_eks_cluster" "cluster" {
-  name     = "${var.cluster_name}-${var.aws_region}-eks-fargate-cluster"
+  name     = "${var.cluster_name}-${var.AWS_DEFAULT_REGION}-eks-fargate-cluster"
   version  = var.cluster_version
   role_arn = aws_iam_role.eks-cluster.arn
 

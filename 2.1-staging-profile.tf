@@ -6,9 +6,9 @@ resource "aws_eks_fargate_profile" "staging" {
   # These subnets must have the following resource tag: 
   # kubernetes.io/cluster/<CLUSTER_NAME>.
   subnet_ids = [
-    var.private_subnetA,
-    var.private_subnetB,
-    var.private_subnetC
+      data.aws_ssm_parameter.rlv-PriSubA_ID.value,
+      data.aws_ssm_parameter.rlv-PriSubB_ID.value,
+      data.aws_ssm_parameter.rlv-PriSubC_ID.value
   ]
 
   selector {

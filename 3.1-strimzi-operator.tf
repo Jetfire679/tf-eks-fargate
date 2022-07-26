@@ -22,5 +22,5 @@ resource "helm_release" "strimzi-kafka-operator-east2" {
   create_namespace = true
   version    = "0.30.0"
 
-  depends_on = [kubernetes_namespace.kafkaeast2]
+  depends_on = [aws_eks_fargate_profile.kube-system]
 }

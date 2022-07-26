@@ -34,12 +34,12 @@ resource "aws_eks_cluster" "cluster" {
     public_access_cidrs     = ["0.0.0.0/0"]
 
     subnet_ids = [
-      var.private_subnetA,
-      var.private_subnetB,
-      var.private_subnetC,
-      var.public_subnetA,
-      var.public_subnetB,
-      var.public_subnetC      
+      data.aws_ssm_parameter.rlv-PriSubA_ID.value,
+      data.aws_ssm_parameter.rlv-PriSubB_ID.value,
+      data.aws_ssm_parameter.rlv-PriSubC_ID.value,
+      data.aws_ssm_parameter.rlv-PubSubA_ID.value,
+      data.aws_ssm_parameter.rlv-PubSubB_ID.value,
+      data.aws_ssm_parameter.rlv-PubSubC_ID.value  
     ]
   }
 

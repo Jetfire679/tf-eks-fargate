@@ -1,6 +1,6 @@
-resource "aws_eks_fargate_profile" "kafka_east_1" {
+resource "aws_eks_fargate_profile" "kafka" {
   cluster_name           = aws_eks_cluster.cluster.name
-  fargate_profile_name   = "kafkaeast1"
+  fargate_profile_name   = "${var.cluster_name}-${var.aws_region}-fargate-kafka-profile"
   pod_execution_role_arn = aws_iam_role.eks-fargate-profile.arn
 
   # These subnets must have the following resource tag: 
@@ -12,6 +12,6 @@ resource "aws_eks_fargate_profile" "kafka_east_1" {
   ]
 
   selector {
-    namespace = "kafkaeast1"
+    namespace = "kafka-${var.aws_region}"
   }
 }

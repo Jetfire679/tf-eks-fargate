@@ -1,5 +1,7 @@
-variable "aws_region" {
-  default ="us-east-1"
+variable "AWS_DEFAULT_REGION" {
+  description = "The AWS region things are created in variable pulled from TF Cloud"
+  # default     = "us-east-2"
+  default     = ""
 }
 
 variable "cluster_name" {
